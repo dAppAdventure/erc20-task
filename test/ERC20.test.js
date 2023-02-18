@@ -16,7 +16,7 @@ describe('ERC20', function () {
 
     beforeEach(async function () {
         [initialHolder, recipient, anotherAccount] = await ethers.getSigners();
-        const ERC20 = await ethers.getContractFactory("ERC20");
+        const ERC20 = await ethers.getContractFactory("MyERC20");
         token = await ERC20.deploy(name, symbol, initialSupply);
     });
 
